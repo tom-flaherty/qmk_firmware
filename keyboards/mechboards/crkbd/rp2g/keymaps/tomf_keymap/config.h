@@ -28,6 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Enable watchdog so keyboard should reboot if frozen
 #define SPLIT_WATCHDOG_ENABLE
 // Set the oneshot timeout to 5 seconds
+#ifdef ONESHOT_TIMEOUT
+#undef ONESHOT_TIMEOUT
+#endif
 #define ONESHOT_TIMEOUT ( 5000 )
 
 #ifdef RGBLIGHT_ENABLE
